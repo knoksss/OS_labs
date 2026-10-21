@@ -1,0 +1,42 @@
+execve("/tmp/main", ["/tmp/main"], 0x7ffea631d8c0 /* 54 vars */) = 0
+brk(NULL)                               = 0x3677a000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fe776a43000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (Нет такого файла или каталога)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=74723, ...}) = 0
+mmap(NULL, 74723, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fe776a30000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib64/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\2408\0\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+fstat(3, {st_mode=S_IFREG|0755, st_size=2482096, ...}) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+mmap(NULL, 2067312, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fe776837000
+mmap(0x7fe7769a9000, 495616, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x172000) = 0x7fe7769a9000
+mmap(0x7fe776a22000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1eb000) = 0x7fe776a22000
+mmap(0x7fe776a28000, 31600, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fe776a28000
+close(3)                                = 0
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fe776834000
+arch_prctl(ARCH_SET_FS, 0x7fe776834740) = 0
+set_tid_address(0x7fe776834d68)         = 7099
+set_robust_list(0x7fe776834a20, 24)     = 0
+rseq({cpu_id_start=0, cpu_id=RSEQ_CPU_ID_UNINITIALIZED, rseq_cs=NULL, flags=0, node_id=0, mm_cid=0, slice_ctrl={request=0, granted=0, __reserved=0}, __reserved=0}, 32, 0, 0x53053053) = 0
+mprotect(0x7fe776a22000, 16384, PROT_READ) = 0
+mprotect(0x404000, 4096, PROT_READ)     = 0
+mprotect(0x7fe776a84000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+getrandom("\x38\xf3\x64\x2c\x47\x0c\xa4\x8a", 8, GRND_NONBLOCK) = 8
+munmap(0x7fe776a30000, 74723)           = 0
+fstat(1, {st_mode=S_IFCHR|0600, st_rdev=makedev(0x88, 0x1), ...}) = 0
+brk(NULL)                               = 0x3677a000
+brk(0x3679b000)                         = 0x3679b000
+write(1, "Print t fot BTree\n", 18)     = 18
+fstat(0, {st_mode=S_IFCHR|0600, st_rdev=makedev(0x88, 0x1), ...}) = 0
+read(0, "2\n", 1024)                    = 2
+write(1, "Enter number\n1. Add node with ke"..., 73) = 73
+write(1, " 5. Exit\n", 9)               = 9
+read(0, "5\n", 1024)                    = 2
+lseek(0, -1, SEEK_CUR)                  = -1 ESPIPE (Недопустимая операция смещения)
+lseek(0, -1, SEEK_CUR)                  = -1 ESPIPE (Недопустимая операция смещения)
+exit_group(0)                           = ?
++++ exited with 0 +++

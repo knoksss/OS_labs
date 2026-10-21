@@ -1,0 +1,59 @@
+execve("/tmp/main", ["/tmp/main"], 0x7ffc325b71b0 /* 54 vars */) = 0
+brk(NULL)                               = 0x1cf89000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f58d92d6000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (Нет такого файла или каталога)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=74723, ...}) = 0
+mmap(NULL, 74723, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f58d92c3000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib64/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\2408\0\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+fstat(3, {st_mode=S_IFREG|0755, st_size=2482096, ...}) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+mmap(NULL, 2067312, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f58d90ca000
+mmap(0x7f58d923c000, 495616, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x172000) = 0x7f58d923c000
+mmap(0x7f58d92b5000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1eb000) = 0x7f58d92b5000
+mmap(0x7f58d92bb000, 31600, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f58d92bb000
+close(3)                                = 0
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f58d90c7000
+arch_prctl(ARCH_SET_FS, 0x7f58d90c7740) = 0
+set_tid_address(0x7f58d90c7d68)         = 8157
+set_robust_list(0x7f58d90c7a20, 24)     = 0
+rseq({cpu_id_start=0, cpu_id=RSEQ_CPU_ID_UNINITIALIZED, rseq_cs=NULL, flags=0, node_id=0, mm_cid=0, slice_ctrl={request=0, granted=0, __reserved=0}, __reserved=0}, 32, 0, 0x53053053) = 0
+mprotect(0x7f58d92b5000, 16384, PROT_READ) = 0
+mprotect(0x402000, 4096, PROT_READ)     = 0
+mprotect(0x7f58d9317000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+getrandom("\x1d\xfa\x21\x01\x82\x0b\x57\x92", 8, GRND_NONBLOCK) = 8
+munmap(0x7f58d92c3000, 74723)           = 0
+fstat(1, {st_mode=S_IFCHR|0600, st_rdev=makedev(0x88, 0x1), ...}) = 0
+brk(NULL)                               = 0x1cf89000
+brk(0x1cfaa000)                         = 0x1cfaa000
+write(1, "Input source:\n", 14)         = 14
+write(1, "1. keyboard\n", 12)           = 12
+write(1, "2. file\n", 8)                = 8
+fstat(0, {st_mode=S_IFCHR|0600, st_rdev=makedev(0x88, 0x1), ...}) = 0
+read(0, "2\n", 1024)                    = 2
+write(1, "File name: ", 11)             = 11
+read(0, "example_graph.txt\n", 1024)    = 18
+openat(AT_FDCWD, "example_graph.txt", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0777, st_size=41, ...}) = 0
+read(3, "4 5\r\n0 1 1\r\n1 2 2\r\n2 3 3\r\n0 2 10"..., 4096) = 41
+lseek(3, 0, SEEK_CUR)                   = 41
+lseek(3, 39, SEEK_SET)                  = 39
+close(3)                                = 0
+write(1, "Start vertex: ", 14)          = 14
+read(0, "4\n", 1024)                    = 2
+write(1, "Save to file?\n", 14)         = 14
+write(1, "1. no (console)\n", 16)       = 16
+write(1, "2. yes\n", 7)                 = 7
+read(0, "1\n", 1024)                    = 2
+write(1, "0: unreachable\n", 15)        = 15
+write(1, "1: unreachable\n", 15)        = 15
+write(1, "2: unreachable\n", 15)        = 15
+write(1, "3: unreachable\n", 15)        = 15
+lseek(0, -1, SEEK_CUR)                  = -1 ESPIPE (Недопустимая операция смещения)
+lseek(0, -1, SEEK_CUR)                  = -1 ESPIPE (Недопустимая операция смещения)
+exit_group(0)                           = ?
++++ exited with 0 +++
